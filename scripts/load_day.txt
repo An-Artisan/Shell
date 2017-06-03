@@ -1,0 +1,6 @@
+Sat Jun  3 20:58:44 CST 2017	load average: 0.14, 0.19, 0.16
+Sat Jun  3 20:59:05 CST 2017	load average: 0.17, 0.19, 0.16
+Sat Jun  3 20:59:21 CST 2017	load average: 0.12, 0.18, 0.16
+Sat Jun  3 21:50:02 CST 2017	users, load average: 0.06, 0.13,
+Sat Jun  3 22:00:01 CST 2017	users, load average: 0.61, 0.28,
+Sat Jun  3 22:10:01 CST 2017	users, load average: 0.16, 0.20,

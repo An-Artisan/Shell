@@ -1,4 +1,4 @@
-#!/bin/bash  
+#!/usr/bin/bash  
 #把生成的cpu.txt文件通过邮件发送给用户  
   
 #提取本服务器的IP地址信息  

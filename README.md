@@ -1,6 +1,7 @@
 针对CentOS7的 监控服务器系统负载情况以及监控服务器系统负载情况
 =============================
 监控服务器系统负载情况
+-----------------------------
 <br>
 uptime 查看
 [root@VM_66_137_centos scripts]# uptime
@@ -50,4 +51,109 @@ CentOS的crond服务重启如下
 <br>
 负载与CPU检测结果邮件每天早上8点发一次。
 <br>
-
+每个月定时备份mysql数据库并打包备份数据库发送到指定邮箱，发送成功就删除备份信息，不占用磁盘资源
+-----------------------------
+先进入数据库查看有哪些数据库
+<br>
+show databases;
+<br>
+MariaDB [(none)]> show databases;
+<br>
++--------------------+
+<br>
+| Database           |
+<br>
++--------------------+
+<br>
+| information_schema |
+<br>
+| blog               |
+<br>
+| makefriend         |
+<br>
+| manager            |
+<br>
+| message            |
+<br>
+| mysql              |
+<br>
+| performance_schema |
+<br>
+| personaladmin      |
+<br>
+| personalblog       |
+<br>
+| personalchat       |
+<br>
+| personalwebsite    |
+<br>
+| private_message    |
+<br>
+| secondhand         |
+<br>
+| study_note         |
+<br>
+| user               |
+<br>
++--------------------+
+<br>
+15 rows in set (0.00 sec)
+<br>
+这里是我的数据库信息 可以看到第一行是Database 这不是数据库，是提示下面是数据库信息，所以这一行需要过滤
+<br>
+然后就是 performance_schema，information_schema，mysql 这是mysql服务器自带的数据库，也需要过滤
+<br>
+# mysql主机名 这里是本机
+<br>
+mysql_host="localhost"
+<br>
+# mysql用户
+<br>
+mysql_user="root"
+<br>
+# mysql密码
+<br>
+mysql_password="xxxxxx"
+<br>
+# sql备份目录  注意：这里要定义绝对路径
+<br>
+databases_dir="/var/www/html/Shell/scripts/DataBasesUpbacks"
+<br>
+这里自己定义你要备份的目录
+<br>
+# 如果该目录不存在，则创建
+<br>
+if [ ! -d "$databases_dir" ]; then
+<br>
+    mkdir -p "$databases_dir"
+<br>
+fi
+<br>
+# 获取该数据库的所有数据库，用来循环遍历备份
+<br>
+databases_string=$(echo "show databases;" | mysql -u$mysql_user -p$mysql_password -h$mysql_
+host)
+<br>
+# 定义不需要的数据库和信息
+<br>
+non_essential="Database information_schema mysql performance_schema"
+<br>
+只需要指定 non_essential变量的内容就可以不用备份该变量内容中的数据库，一定要加上Database，因为show命令第一行会有Database，前面说过。
+<br>
+最后修改你的邮箱地址就可以了
+<br>
+echo "这是服务器数据库的备份文件，请下载保存"|mutt -s "数据库备份"  13330295142@163.com -a /var/www/html/Shell/scripts/DataBasesUpbacks/"$zip_name"
+<br>
+我的邮箱是13330295142@163.com 这里改成你的
+<br>
+最后添加到定时任务，每月1号执行
+<br>
+crontab -e 添加下面信息，当然脚本位置，写你自己的
+<br>
+0 0 1 * * /var/www/html/Shell/scripts/DatabasesUpbacks.sh
+<br>
+该项目持续更新 o(╯□╰)o
+===================================
+[个人主页](http://www.joker1996.com)
+-----------------------------------
+<br />

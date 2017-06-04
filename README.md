@@ -107,7 +107,7 @@ mysql主机名 这里是本机
 <br>
 mysql_host="localhost"
 <br>
-# mysql用户
+mysql用户
 <br>
 mysql_user="root"
 <br>
@@ -152,12 +152,11 @@ crontab -e 添加下面信息，当然脚本位置，写你自己的
 <br>
 0 0 1 * * /var/www/html/Shell/scripts/DatabasesUpbacks.sh
 <br>
-#####
+
 ![备份截图](https://github.com/StubbornGrass/Shell/blob/master/ReadMeImages/demo1.png)
 <br>
-该项目会持续更新~~o(╯□╰)o
-===================================
+
+#该项目会持续更新~~o(╯□╰)o
 <br>
-[个人主页](http://www.joker1996.com)
------------------------------------
+#[个人主页](http://www.joker1996.com)
 <br />

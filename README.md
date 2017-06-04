@@ -154,8 +154,10 @@ crontab -e 添加下面信息，当然脚本位置，写你自己的
 <br>
 #####
 ![备份截图](https://github.com/StubbornGrass/Shell/blob/master/ReadMeImages/demo1.png)
+<br>
 该项目会持续更新~~o(╯□╰)o
 ===================================
+<br>
 [个人主页](http://www.joker1996.com)
 -----------------------------------
 <br />

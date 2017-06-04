@@ -122,7 +122,7 @@ Sun Jun  4 17:50:01 CST 2017	%Cpu(s):  1.2 us,  1.5 sy,  0.0 ni, 96.9 id,  0.2 w
 Sun Jun  4 18:00:02 CST 2017	29984 root      20   0    9504   1140    964 S  0.0  0.1   0:00.00 CpuWarning.+
 Sun Jun  4 18:10:01 CST 2017	29987 root      20   0    9504   1248   1072 S  0.0  0.1   0:00.00 CpuCheck.sh
 Sun Jun  4 18:20:02 CST 2017	30008 root      20   0    9504    556    372 S  0.0  0.1   0:00.00 CpuWarning.+
-	%Cpu(s):  1.2 us,  1.5 sy,  0.0 ni, 96.9 id,  0.2 wa,  0.0 hi,  0.2 si,  0.0 st
+Sun Jun  4 18:30:01 CST 2017	%Cpu(s):  1.2 us,  1.5 sy,  0.0 ni, 96.9 id,  0.2 wa,  0.0 hi,  0.2 si,  0.0 st
 	30901 root      20   0    9504   1248   1072 S  0.0  0.1   0:00.00 CpuCheck.sh
 	30902 root      20   0    9504   1140    968 S  0.0  0.1   0:00.00 CpuWarning.+
 	30937 root      20   0    9504    552    372 S  0.0  0.1   0:00.00 CpuWarning.+
@@ -495,3 +495,7 @@ Sun Jun  4 18:20:02 CST 2017	30008 root      20   0    9504    556    372 S  0.0
 	11188 root      20   0    9504   1140    964 S  0.0  0.1   0:00.00 CpuWarning.+
 	11190 root      20   0    9504   1248   1072 S  0.0  0.1   0:00.00 CpuCheck.sh
 	11215 root      20   0    9504    556    372 S  0.0  0.1   0:00.00 CpuWarning.+
+	%Cpu(s):  1.4 us,  1.8 sy,  0.0 ni, 96.3 id,  0.1 wa,  0.0 hi,  0.3 si,  0.0 st
+	11937 root      20   0    9504   1252   1072 S  0.0  0.1   0:00.00 CpuCheck.sh
+	11942 root      20   0    9504   1136    964 S  0.0  0.1   0:00.00 CpuWarning.+
+	11967 root      20   0    9504    556    372 S  0.0  0.1   0:00.00 CpuWarning.+

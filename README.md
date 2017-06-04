@@ -103,7 +103,7 @@ MariaDB [(none)]> show databases;
 <br>
 然后就是 performance_schema，information_schema，mysql 这是mysql服务器自带的数据库，也需要过滤
 <br>
-# mysql主机名 这里是本机
+mysql主机名 这里是本机
 <br>
 mysql_host="localhost"
 <br>
@@ -151,7 +151,10 @@ echo "这是服务器数据库的备份文件，请下载保存"|mutt -s "数据
 crontab -e 添加下面信息，当然脚本位置，写你自己的
 <br>
 0 0 1 * * /var/www/html/Shell/scripts/DatabasesUpbacks.sh
-![备份截图](https://github.com/StubbornGrass/Shell/blob/master/ReadMeImages/demo1.png)
 <br>
+#####
+![备份截图](https://github.com/StubbornGrass/Shell/blob/master/ReadMeImages/demo1.png)
+===================================
 [个人主页](http://www.joker1996.com)
+-----------------------------------
 <br />
